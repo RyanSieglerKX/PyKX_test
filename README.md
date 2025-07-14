@@ -1,6 +1,6 @@
 # PyKX vs Polars vs Pandas As-Of Join Test
 
-This notebook presents a comparison of [PyKX (kdb+)](https://github.com/KxSystems/pykx) and [Polars](https://pola-rs.github.io/polars/) (both eager and lazy execution modes) for performing as-of joins and a basic slippage calculation on time-series market data.
+This notebook presents a comparison of Pandas, [PyKX (kdb+)](https://github.com/KxSystems/pykx) and [Polars](https://pola-rs.github.io/polars/) (both eager and lazy execution modes) for performing as-of joins and a basic slippage calculation on time-series market data.
 
 > **Note:**  
 > This is an **independent, community-driven test** and is **not an official KX (kdb+) or Polars benchmark**. It is intended for technical discussion, reproducibility, and as a baseline for further performance exploration.
@@ -17,7 +17,7 @@ This notebook presents a comparison of [PyKX (kdb+)](https://github.com/KxSystem
   - Wall-clock runtime (multiple iterations)
   - Memory usage (incremental, per run)
 - **Environment:**  
-  Benchmarks are performed as “warm” runs within a single Python process, reflecting typical batch analytical workflows.
+  Tests are performed as “warm” runs within a single Python process, reflecting typical batch analytical workflows.
 
 ---
 
@@ -32,7 +32,7 @@ This notebook presents a comparison of [PyKX (kdb+)](https://github.com/KxSystem
 - **Memory profiler limitations:**  
   - Memory increments may be zero for highly efficient libraries or due to sampling granularity.
 - **Limitations:**  
-  - Not a “cold start” benchmark (no process restart between runs).
+  - Not a “cold start” test (no process restart between runs).
   - Not measuring file scan or on-disk materialization.
 
 ---
@@ -47,7 +47,7 @@ This notebook presents a comparison of [PyKX (kdb+)](https://github.com/KxSystem
 
 ## Disclaimer
 
-**This benchmark is not affiliated with, nor endorsed by, KX Systems, Kdb+, or the Polars core team.**  
+**This test is not affiliated with, nor endorsed by, KX Systems, Kdb+, or the Polars core team.**  
 Results should be interpreted as *one independent set of measurements*—for further research and community discussion.
 
 ---
